@@ -11,6 +11,7 @@ public class Course {
     String start_time;
     String end_time;
     String day;
+    String final_exam_date;
     String date;
     int hours;
     String room_id;
@@ -18,12 +19,13 @@ public class Course {
     public Course() {
     }
 
-    public Course(String course_id, String name, String start_time, String end_time, String day, String date, int hours, String room_id) {
+    public Course(String course_id, String name, String start_time, String end_time, String day, String final_exam_date, String date, int hours, String room_id) {
         this.course_id = course_id;
         this.name = name;
         this.start_time = start_time;
         this.end_time = end_time;
         this.day = day;
+        this.final_exam_date = final_exam_date;
         this.date = date;
         this.hours = hours;
         this.room_id = room_id;
@@ -67,6 +69,14 @@ public class Course {
 
     public void setDay(String day) {
         this.day = day;
+    }
+
+    public String getFinal_exam_date() {
+        return final_exam_date;
+    }
+
+    public void setFinal_exam_date(String final_exam_date) {
+        this.final_exam_date = final_exam_date;
     }
 
     public String getDate() {

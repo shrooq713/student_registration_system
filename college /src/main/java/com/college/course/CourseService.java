@@ -26,10 +26,15 @@ public class CourseService {
     }
 
     public String updateCourse(String id, Course data) {
-        Course todo= courseRepository.findById(id).orElse(null);
-        if(todo != null){
-            todo.setName(data.getName());
-            courseRepository.save(todo);
+        Course course= courseRepository.findById(id).orElse(null);
+        if(course != null){
+            course.setName(data.getName());
+            course.setStart_time(data.getStart_time());
+            course.setEnd_time(data.getEnd_time());
+            course.setDay(data.getDay());
+            course.setFinal_exam_date(data.getFinal_exam_date());
+            course.setHours(data.getHours());
+            courseRepository.save(course);
         }
         return "updated";
     }

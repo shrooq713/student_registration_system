@@ -20,7 +20,6 @@ public class CourseController {
         return courseService.getCourses();
     }
 
-    //.........................................................
     @GetMapping(path = "/{id}")
     public Course getCourse(@PathVariable String id){
         return courseService.getCourse(id);
